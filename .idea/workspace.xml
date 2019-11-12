@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b627de2c-6211-483c-a749-ddab50b65c89" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cinemajava/webcinema/models/Filme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cinemajava/webcinema/models/Filme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cinemajava/webcinema/models/Sessao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cinemajava/webcinema/models/Sessao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/filme/detalhesFilme.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/filme/detalhesFilme.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cinemajava/webcinema/models/Filme.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cinemajava/webcinema/models/Filme.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cinemajava/webcinema/models/Sessao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cinemajava/webcinema/models/Sessao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/filme/detalhesFilme.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/filme/detalhesFilme.html" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1SRIEOT1jMsLU57g1Hqrz8Bg4cu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Downloads\webcinema\src\main\webapp\WEB-INF\views" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Downloads\webcinema\src\main\resources\templates" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Boot" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="webcinema" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.cinemajava.webcinema.Boot" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b627de2c-6211-483c-a749-ddab50b65c89" name="Default Changelist" comment="" />
+      <created>1571519868381</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571519868381</updated>
+      <workItem from="1571519878863" duration="1701000" />
+      <workItem from="1571586439747" duration="832000" />
+      <workItem from="1571592909318" duration="3279000" />
+      <workItem from="1571611989665" duration="3961000" />
+      <workItem from="1571700642606" duration="3204000" />
+      <workItem from="1572193082203" duration="6444000" />
+      <workItem from="1572800702643" duration="44000" />
+      <workItem from="1572800842723" duration="8022000" />
+      <workItem from="1572817299636" duration="1834000" />
+      <workItem from="1573096237209" duration="985000" />
+      <workItem from="1573329859571" duration="30000" />
+      <workItem from="1573331080545" duration="12329000" />
+      <workItem from="1573436883626" duration="865000" />
+      <workItem from="1573513040345" duration="3022000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
