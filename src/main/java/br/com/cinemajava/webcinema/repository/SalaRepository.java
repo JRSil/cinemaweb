@@ -5,4 +5,5 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface SalaRepository extends CrudRepository<Sala, String>
 {
+    Sala findByIdSala(long idSala);
 }

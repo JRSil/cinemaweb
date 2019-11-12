@@ -102,6 +102,10 @@
                                 <input type="radio" name="dublagem" class="form-control" id="dublado_nao" value="0" />
                                 <label for="dublado_nao">Nao</label>
                             </div>
+                            <select name="sala" class="form-control" id="sala">
+                                <option value="">Selecione uma categoria</option>
+                                <option th:each="filme : ${filme}" th:value="${sala.idSala}" th:text="${sala.idSala}"></option>
+                            </select>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </section>

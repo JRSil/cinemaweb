@@ -1,7 +1,9 @@
 package br.com.cinemajava.webcinema.controllers;
 
 import br.com.cinemajava.webcinema.models.Filme;
+import br.com.cinemajava.webcinema.models.Sessao;
 import br.com.cinemajava.webcinema.repository.FilmeRepository;
+import br.com.cinemajava.webcinema.repository.SessaoRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,6 +17,9 @@ public class FilmeController
 {
     @Autowired
     private FilmeRepository fr;
+
+    @Autowired
+    private SessaoRepository sr;
 
     @RequestMapping(value = "/cadastrarFilme", method = RequestMethod.GET)
     public String form()
@@ -38,13 +43,24 @@ public class FilmeController
         return mv;
     }
 
-    @RequestMapping("/{idFilme}")
+    @RequestMapping(value = "/{idFilme}", method = RequestMethod.GET)
     public ModelAndView detalhesFilme(@PathVariable("idFilme") long idFilme)
     {
         Filme filme = fr.findByIdFilme(idFilme);
         ModelAndView mv = new ModelAndView("filme/detalhesFilme");
         mv.addObject("filme", filme);
-        System.out.println("filme" + filme);
+
+        Iterable<Sessao> sessoes = sr.findByFilme(filme);
+        mv.addObject("sessoes", sessoes);
         return mv;
+    }
+
+    @RequestMapping(value = "/{idFilme}", method = RequestMethod.POST)
+    public String detalhesFilmePost(@PathVariable("idFilme") long idFilme, Sessao sessao)
+    {
+        Filme filme = fr.findByIdFilme(idFilme);
+        sessao.setFilme(filme);
+        sr.save(sessao);
+        return "redirect:/{idFilme}";
     }
 }

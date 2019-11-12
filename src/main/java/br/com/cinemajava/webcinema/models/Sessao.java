@@ -10,9 +10,8 @@ public class Sessao implements Serializable
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer idSessao;
+    private long idSessao;
 
-    private Integer idSala;
     private String dia;
     private String hora;
     private boolean dublagem;
@@ -23,24 +22,14 @@ public class Sessao implements Serializable
     @ManyToOne
     private Sala sala;
 
-    public Integer getIdSessao()
+    public long getIdSessao()
     {
         return idSessao;
     }
 
-    public void setIdSessao(Integer idSessao)
+    public void setIdSessao(long idSessao)
     {
         this.idSessao = idSessao;
-    }
-
-    public Integer getIdSala()
-    {
-        return idSala;
-    }
-
-    public void setIdSala(Integer idSala)
-    {
-        this.idSala = idSala;
     }
 
     public String getDia()

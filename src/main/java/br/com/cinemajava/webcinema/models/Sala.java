@@ -1,10 +1,8 @@
 package br.com.cinemajava.webcinema.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 public class Sala implements Serializable
@@ -13,17 +11,20 @@ public class Sala implements Serializable
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer idSala;
+    private long idSala;
 
     private String tipoImagem;
     private int qtdMax;
 
-    public Integer getIdSala()
+    @OneToMany
+    private List<Sessao> sessao;
+
+    public long getIdSala()
     {
         return idSala;
     }
 
-    public void setIdSala(Integer idSala)
+    public void setIdSala(long idSala)
     {
         this.idSala = idSala;
     }
@@ -46,5 +47,15 @@ public class Sala implements Serializable
     public void setQtdMax(int qtdMax)
     {
         this.qtdMax = qtdMax;
+    }
+
+    public List<Sessao> getSessao()
+    {
+        return sessao;
+    }
+
+    public void setSessao(List<Sessao> sessao)
+    {
+        this.sessao = sessao;
     }
 }
