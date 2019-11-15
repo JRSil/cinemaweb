@@ -70,23 +70,20 @@
             <div class="container">
                 <div class="row">
 
-                    <section id="filmes" class="box-filmes">
-                        <h2>Filmes:</h2>
-                        <ul id="list-filmes" class="list-filmes">
-                            <li th:each="filme : ${filme}" class="item-filmes">
-                                <h4><span th:text="${filme.nomeFilme}"></span></h4>
-                                <p>Classificacao: <span th:text="${filme.classificacao}"></span></p>
-                                <p>Duracao: <span th:text="${filme.duracao}"></span></p>
-                                <p>Esta vigente? <span th:text="${filme.vigencia}"></span></p>
-                                <p>Categoria: <span th:text="${filme.categoria}"></span></p>
-                            </li>
-                        </ul>
+                    <section id="filmes" class="box-filmes" aria-labelledby="lbldetalhesfilme">
+                        <div th:each="filme : ${filme}" class="item-filmes">
+                            <h2 id="lbldetalhesfilme"><span th:text="${filme.nomeFilme}"></span></h2>
+                            <p>Classificacao: <span th:text="${filme.classificacao}"></span></p>
+                            <p>Duracao: <span th:text="${filme.duracao}"></span></p>
+                            <p>Esta vigente? <span th:text="${filme.vigencia}"></span></p>
+                            <p>Categoria: <span th:text="${filme.categoria}"></span></p>
+                        </div>
                         <a href="/filmes" class="btn btn-cadastro">Lista de filmes</a>
                     </section>
 
-                    <section id="sessao_cadastro" class="sessao-cadastro">
-                        <form class="form form-sessao" id="form-sessao"
-                              action="" method="post" tabindex="-1">
+                    <section id="sessao_cadastro" class="sessao-cadastro" aria-labelledby="lblsessaocadastro">
+                        <h2 id="lblsessaocadastro">Cadastro de sessoes para este filme:</h2>
+                        <form class="form form-sessao" id="form-sessao" action="" method="post">
                             <div class="form-group">
                                 <label for="dia_sessao">Dia da Sessao</label>
                                 <input type="date" name="dia" class="form-control" id="dia_sessao" placeholder="" />
@@ -103,11 +100,23 @@
                                 <label for="dublado_nao">Nao</label>
                             </div>
                             <select name="sala" class="form-control" id="sala">
-                                <option value="">Selecione uma categoria</option>
-                                <option th:each="filme : ${filme}" th:value="${sala.idSala}" th:text="${sala.idSala}"></option>
+                                <option value="">Selecione uma Sala</option>
+                                <option th:each="sala : ${sala}" th:value="${sala.idSala}" th:text="${sala.idSala}"></option>
                             </select>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
+                    </section>
+
+                    <section id="sessoes" class="box-sessoes" aria-labelledby="lbllistasessoes">
+                        <h2 id="lbllistasessoes">Lista de Sessoes</h2>
+                        <ul id="list-sessoes" class="list-sessoes">
+                            <li th:each="sessao : ${sessao}" class="item-sessoes">
+                                <p>Dia: <span th:text="${sessao.dia}"></span></p>
+                                <p>Hora: <span th:text="${sessao.hora}"></span></p>
+                                <p>Dublado: <span th:text="${sessao.dublagem}"></span></p>
+                                <p>Sala: <span th:text="${sessao.sala}"></span></p>
+                            </li>
+                        </ul>
                     </section>
 
                 </div>

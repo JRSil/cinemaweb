@@ -31,7 +31,7 @@
 			<div class="main-logo">
 				<a class="header-brand align-self-start" href="/" rel="home">
 					<img class="img-responsive" src="./assets/images/logo.png" alt="Logomarca: WebCinema" />
-				</a><!--/.header-brand -->
+				</a>
 			</div>
 
 			<article class="menu-principal">
@@ -93,17 +93,32 @@
 						</tr>
 					</tbody>
 				</table>
-
-<!--				<ul id="list-filmes" class="list-filmes">-->
-<!--					<li th:each="filme : ${filme}" class="item-filmes">-->
-<!--						<h4><span th:text="${filme.nomeFilme}"></span></h4>-->
-<!--						<p><span th:text="${filme.classificacao}"></span></p>-->
-<!--						<p><span th:text="${filme.duracao}"></span></p>-->
-<!--						<p><span th:text="${filme.vigencia}"></span></p>-->
-<!--						<p><span th:text="${filme.categoria}"></span></p>-->
-<!--					</li>-->
-<!--				</ul>-->
 				<a href="/cadastrarFilme" class="btn btn-cadastro">Cadastrar filme</a>
+			</section>
+
+			<section id="sala" class="box-salas">
+				<h2>Salas Cadastradas:</h2>
+				<table>
+					<thead>
+					<tr>
+						<th>Numero</th>
+						<th>Tipo da imagem</th>
+						<th>Quantidade Maxima</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr th:each="sala : ${sala}" class="item-sala">
+						<td>
+							<a th:href="${(#mvc.url('SC#detalhesSala').arg(0, sala.idSala)).build()}">
+								<span th:text="${sala.idSala}"></span>
+							</a>
+						</td>
+						<td><span th:text="${sala.tipoImagem}"></span></td>
+						<td><span th:text="${sala.qtdMax}"></span></td>
+					</tr>
+					</tbody>
+				</table>
+				<a href="/cadastrarSala" class="btn btn-cadastro">Cadastrar sala</a>
 			</section>
 		</main>
 

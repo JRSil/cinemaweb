@@ -5,11 +5,13 @@ import br.com.cinemajava.webcinema.repository.SalaRepository;
 import br.com.cinemajava.webcinema.repository.SessaoRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+@Controller
 public class SalaController
 {
     @Autowired
@@ -19,13 +21,13 @@ public class SalaController
     private SessaoRepository sr;
 
     @RequestMapping(value = "/cadastrarSala", method = RequestMethod.GET)
-    public String form()
+    public String formSala()
     {
         return "sala/formSala";
     }
 
     @RequestMapping(value = "/cadastrarSala", method = RequestMethod.POST)
-    public String form(Sala sala)
+    public String formSala(Sala sala)
     {
         sar.save(sala);
         return "redirect:/cadastrarSala";

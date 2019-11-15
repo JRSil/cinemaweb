@@ -100,8 +100,8 @@
                                 <label for="dublado_nao">Nao</label>
                             </div>
                             <select name="sala" class="form-control" id="sala">
-                                <option value="">Selecione uma categoria</option>
-                                <option th:each="filme : ${filme}" th:value="${sala.idSala}" th:text="${sala.idSala}"></option>
+                                <option value="">Selecione uma Sala</option>
+                                <option th:each="sala : ${sala}" th:value="${sala.idSala}" th:text="${sala.idSala}"></option>
                             </select>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
@@ -109,12 +109,12 @@
 
                     <section id="sessoes" class="box-sessoes" aria-labelledby="lbllistasessoes">
                         <h2 id="lbllistasessoes">Lista de Sessoes</h2>
-                        <ul id="list-sessoes" class="list-sessoes">-->
+                        <ul id="list-sessoes" class="list-sessoes">
                             <li th:each="sessao : ${sessao}" class="item-sessoes">
-                                <p><span th:text="${sessao.dia}"></span></p>
-                                <p><span th:text="${sessao.hora}"></span></p>
-                                <p><span th:text="${sessao.dublagem}"></span></p>
-                                <p><span th:text="${sessao.sala}"></span></p>
+                                <p>Dia: <span th:text="${sessao.dia}"></span></p>
+                                <p>Hora: <span th:text="${sessao.hora}"></span></p>
+                                <p>Dublado: <span th:text="${sessao.dublagem}"></span></p>
+                                <p>Sala: <span th:text="${sessao.sala}"></span></p>
                             </li>
                         </ul>
                     </section>

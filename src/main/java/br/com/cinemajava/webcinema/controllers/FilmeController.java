@@ -22,13 +22,13 @@ public class FilmeController
     private SessaoRepository sr;
 
     @RequestMapping(value = "/cadastrarFilme", method = RequestMethod.GET)
-    public String form()
+    public String formFilme()
     {
         return "filme/formFilme";
     }
 
     @RequestMapping(value = "/cadastrarFilme", method = RequestMethod.POST)
-    public String form(Filme filme)
+    public String formFilme(Filme filme)
     {
         fr.save(filme);
         return "redirect:/cadastrarFilme";
