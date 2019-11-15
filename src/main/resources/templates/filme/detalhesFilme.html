@@ -99,11 +99,11 @@
                                 <input type="radio" name="dublagem" class="form-control" id="dublado_nao" value="0" />
                                 <label for="dublado_nao">Nao</label>
                             </div>
-                            <select name="sala" class="form-control" id="sala">
-                                <option value="">Selecione uma Sala</option>
-                                <option th:each="sala : ${sala}" th:value="${sala.idSala}" th:text="${sala.idSala}"></option>
-                            </select>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+<!--                            <select name="sala" class="form-control" id="sala">-->
+<!--                                <option value="">Selecione uma Sala</option>-->
+<!--                                <option th:each="sala : ${sala}" th:value="${sala.idSala}" th:text="${sala.idSala}+' - '+${sala.tipoImagem}"></option>-->
+<!--                            </select>-->
+                            <button type="submit" class="btn btn-primary">Cadastrar</button>
                         </form>
                     </section>
 
@@ -114,7 +114,7 @@
                                 <p>Dia: <span th:text="${sessao.dia}"></span></p>
                                 <p>Hora: <span th:text="${sessao.hora}"></span></p>
                                 <p>Dublado: <span th:text="${sessao.dublagem}"></span></p>
-                                <p>Sala: <span th:text="${sessao.sala}"></span></p>
+<!--                                <p>Sala: <span th:text="${sessao.sala}"></span></p>-->
                             </li>
                         </ul>
                     </section>

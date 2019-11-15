@@ -1,5 +1,7 @@
 package br.com.cinemajava.webcinema.models;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,19 +15,21 @@ public class Ingresso implements Serializable
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer idIngresso;
+    private long idIngresso;
 
     private int idSessao;
     private int quantidade;
     private float total;
+
+    @NotEmpty
     private String formaPgmt;
 
-    public Integer getIdIngresso()
+    public long getIdIngresso()
     {
         return idIngresso;
     }
 
-    public void setIdIngresso(Integer idIngresso)
+    public void setIdIngresso(long idIngresso)
     {
         this.idIngresso = idIngresso;
     }

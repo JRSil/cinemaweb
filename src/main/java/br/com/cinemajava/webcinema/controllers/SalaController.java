@@ -36,13 +36,13 @@ public class SalaController
     @RequestMapping("/salas")
     public ModelAndView listaSalas()
     {
-        ModelAndView mv = new ModelAndView("home/index");
+        ModelAndView mv = new ModelAndView("sala/salas");
         Iterable<Sala> salas = sar.findAll();
         mv.addObject("sala", salas);
         return mv;
     }
 
-    @RequestMapping(value = "/{idSala}", method = RequestMethod.GET)
+    @RequestMapping(value = "/salas/{idSala}", method = RequestMethod.GET)
     public ModelAndView detalhesSala(@PathVariable("idSala") long idSala)
     {
         Sala sala = sar.findByIdSala(idSala);

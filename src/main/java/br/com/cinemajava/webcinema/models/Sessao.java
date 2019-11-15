@@ -1,5 +1,7 @@
 package br.com.cinemajava.webcinema.models;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -12,8 +14,11 @@ public class Sessao implements Serializable
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long idSessao;
 
+    @NotEmpty
     private String dia;
+    @NotEmpty
     private String hora;
+
     private boolean dublagem;
 
     @ManyToOne

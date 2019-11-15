@@ -1,5 +1,7 @@
 package br.com.cinemajava.webcinema.models;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,22 +15,29 @@ public class Atendente implements Serializable
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer idAtendente;
+    private long idAtendente;
 
+    @NotEmpty
     private String nome;
+    @NotEmpty
     private String CPF;
+    @NotEmpty
     private String nasc;
+    @NotEmpty
     private String email;
+    @NotEmpty
     private String user;
+    @NotEmpty
     private String senha;
+    @NotEmpty
     private String tipo;
 
-    public Integer getIdAtendente()
+    public long getIdAtendente()
     {
         return idAtendente;
     }
 
-    public void setIdAtendente(Integer idAtendente)
+    public void setIdAtendente(long idAtendente)
     {
         this.idAtendente = idAtendente;
     }

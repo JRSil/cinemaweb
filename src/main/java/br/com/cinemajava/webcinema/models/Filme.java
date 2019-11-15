@@ -1,5 +1,7 @@
 package br.com.cinemajava.webcinema.models;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
@@ -13,11 +15,21 @@ public class Filme implements Serializable
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long idFilme;
 
+    @NotEmpty
     private String nomeFilme;
+
+//    @NotEmpty
     private Integer classificacao;
+
+//    @NotEmpty
     private float duracao;
+
     private boolean cartaz;
+
+    @NotEmpty
     private String vigencia;
+
+    @NotEmpty
     private String categoria;
 
     @OneToMany

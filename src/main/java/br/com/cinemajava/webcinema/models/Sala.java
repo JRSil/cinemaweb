@@ -1,5 +1,7 @@
 package br.com.cinemajava.webcinema.models;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
@@ -13,7 +15,9 @@ public class Sala implements Serializable
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long idSala;
 
+    @NotEmpty
     private String tipoImagem;
+
     private int qtdMax;
 
     @OneToMany

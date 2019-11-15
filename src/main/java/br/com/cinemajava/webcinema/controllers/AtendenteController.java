@@ -5,6 +5,7 @@ import br.com.cinemajava.webcinema.repository.AtendenteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 public class AtendenteController
 {
@@ -22,5 +23,14 @@ public class AtendenteController
     {
         ar.save(atendente);
         return "redirect:/cadastrarAtendente";
+    }
+
+    @RequestMapping("/atendentes")
+    public ModelAndView listaAtendentes()
+    {
+        ModelAndView mv = new ModelAndView("atendente/atendentes");
+        Iterable<Atendente> atendentes = ar.findAll();
+        mv.addObject("atendente", atendentes);
+        return mv;
     }
 }
