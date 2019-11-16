@@ -110,7 +110,7 @@
                     <section id="sessoes" class="box-sessoes" aria-labelledby="lbllistasessoes">
                         <h2 id="lbllistasessoes">Lista de Sessoes</h2>
                         <ul id="list-sessoes" class="list-sessoes">
-                            <li th:each="sessao : ${sessao}" class="item-sessoes">
+                            <li th:each="sessao : ${sessoes}" class="item-sessoes">
                                 <p>Dia: <span th:text="${sessao.dia}"></span></p>
                                 <p>Hora: <span th:text="${sessao.hora}"></span></p>
                                 <p>Dublado: <span th:text="${sessao.dublagem}"></span></p>
