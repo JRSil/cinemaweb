@@ -18,10 +18,8 @@ public class Filme implements Serializable
     @NotEmpty
     private String nomeFilme;
 
-//    @NotEmpty
     private Integer classificacao;
 
-//    @NotEmpty
     private float duracao;
 
     private boolean cartaz;

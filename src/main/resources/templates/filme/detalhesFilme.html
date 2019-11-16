@@ -83,7 +83,9 @@
 
                     <section id="sessao_cadastro" class="sessao-cadastro" aria-labelledby="lblsessaocadastro">
                         <h2 id="lblsessaocadastro">Cadastro de sessoes para este filme:</h2>
-                        <form class="form form-sessao" id="form-sessao" action="" method="post">
+                        <th:block th:include="mensagemValidacao"></th:block>
+                        <form class="form form-sessao" id="form-sessao" action=""
+                              method="post" th:object="sessao">
                             <div class="form-group">
                                 <label for="dia_sessao">Dia da Sessao</label>
                                 <input type="date" name="dia" class="form-control" id="dia_sessao" placeholder="" />

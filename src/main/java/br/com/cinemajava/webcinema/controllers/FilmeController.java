@@ -37,9 +37,14 @@ public class FilmeController
     }
 
     @RequestMapping(value = "/cadastrarFilme", method = RequestMethod.POST)
-    public String formFilme(Filme filme)
+    public String formFilme(@Valid Filme filme, BindingResult result, RedirectAttributes attributes)
     {
+        if (result.hasErrors()) {
+            attributes.addFlashAttribute("mensagem", "Verifique os campos!");
+            return "redirect:/cadastrarFilme";
+        }
         fr.save(filme);
+        attributes.addFlashAttribute("mensagem", "Filme adicionado com sucesso!");
         return "redirect:/cadastrarFilme";
     }
 
