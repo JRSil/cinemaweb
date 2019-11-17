@@ -9,4 +9,5 @@ public interface SessaoRepository extends CrudRepository<Sessao, String>
 {
     Iterable<Sessao> findByFilme(Filme filme);
     Iterable<Sessao> findBySala(Sala sala);
+    Sessao findByIdSessao(long idSessao);
 }

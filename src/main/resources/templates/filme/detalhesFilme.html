@@ -117,6 +117,13 @@
                                 <p>Hora: <span th:text="${sessao.hora}"></span></p>
                                 <p>Dublado: <span th:text="${sessao.dublagem}"></span></p>
 <!--                                <p>Sala: <span th:text="${sessao.sala}"></span></p>-->
+                                <p>
+                                    <span>Deletar:</span>
+                                    <a class="btn btn-danger"
+                                                th:href="${(#mvc.url('FC#deletarSessao').arg(0, sessao.idSessao)).build()}">
+                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                    </a>
+                                </p>
                             </li>
                         </ul>
                     </section>

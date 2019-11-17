@@ -72,6 +72,14 @@ public class FilmeController
         return mv;
     }
 
+    @RequestMapping("/deletarFilme")
+    public String deletarFilme(long idFilme)
+    {
+        Filme filme = fr.findByIdFilme(idFilme);
+        fr.delete(filme);
+        return "redirect:/filmes";
+    }
+
     @RequestMapping(value = "/filmes/{idFilme}", method = RequestMethod.POST)
     public String detalhesFilmePost(@PathVariable("idFilme") long idFilme, @Valid Sessao sessao, BindingResult result, RedirectAttributes attributes)
     {
@@ -86,5 +94,17 @@ public class FilmeController
         sr.save(sessao);
         attributes.addFlashAttribute("mensagem", "Sessao adicionada com sucesso!");
         return "redirect:/filmes/{idFilme}";
+    }
+
+    @RequestMapping("/deletarSessao")
+    public String deletarSessao(long idSessao)
+    {
+        Sessao sessao = sr.findByIdSessao(idSessao);
+        sr.delete(sessao);
+
+        Filme filme = sessao.getFilme();
+        long idFilmeLong = filme.getIdFilme();
+        String idFilme = "" + idFilmeLong;
+        return "redirect:/filmes/" + idFilme;
     }
 }
