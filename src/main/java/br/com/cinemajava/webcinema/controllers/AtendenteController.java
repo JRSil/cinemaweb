@@ -32,7 +32,7 @@ public class AtendenteController
             return "redirect:/cadastrarAtendente";
         }
         ar.save(atendente);
-        attributes.addFlashAttribute("mensagem", "Filme adicionado com sucesso!");
+        attributes.addFlashAttribute("mensagem", "Atendente adicionado com sucesso!");
         return "redirect:/cadastrarAtendente";
     }
 
