@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b627de2c-6211-483c-a749-ddab50b65c89" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cinemajava/webcinema/controllers/AtendenteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cinemajava/webcinema/controllers/AtendenteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/atendente/formAtendente.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/atendente/formAtendente.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/filme/formFilme.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/filme/formFilme.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sala/formSala.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sala/formSala.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cinemajava/webcinema/controllers/FilmeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cinemajava/webcinema/controllers/FilmeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cinemajava/webcinema/models/Sessao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cinemajava/webcinema/models/Sessao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/filme/detalhesFilme.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/filme/detalhesFilme.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/filme/filmes.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/filme/filmes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cinemajava/webcinema/controllers/FilmeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cinemajava/webcinema/controllers/FilmeController.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +103,8 @@
       <workItem from="1573929909568" duration="4694000" />
       <workItem from="1573945226947" duration="4080000" />
       <workItem from="1574002967431" duration="2399000" />
-      <workItem from="1574022863103" duration="1058000" />
+      <workItem from="1574022863103" duration="1654000" />
+      <workItem from="1574381388240" duration="8336000" />
     </task>
     <servers />
   </component>

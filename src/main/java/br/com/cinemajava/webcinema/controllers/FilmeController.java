@@ -85,12 +85,14 @@ public class FilmeController
     {
         if (result.hasErrors()) {
             attributes.addFlashAttribute("mensagem", "Verifique os campos!");
+            System.err.println("idFilme = " + idFilme + ", sessao = " + sessao.getCodS() + ", result = " + result + ", attributes = " + attributes);
             return "redirect:/filmes/{idFilme}";
         }
+        System.err.println("idFilme = " + idFilme + ", sessao = " + sessao.getCodS() + ", result = " + result + ", attributes = " + attributes);
         Filme filme = fr.findByIdFilme(idFilme);
-//        Sala sala = sar.findByIdSala(idSala);
+        Sala sala = sar.findByIdSala(sessao.getCodS());
         sessao.setFilme(filme);
-//        sessao.setSala(sala);
+        sessao.setSala(sala);
         sr.save(sessao);
         attributes.addFlashAttribute("mensagem", "Sessao adicionada com sucesso!");
         return "redirect:/filmes/{idFilme}";

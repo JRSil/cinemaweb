@@ -75,7 +75,7 @@
                             <h2 id="lbldetalhesfilme"><span th:text="${filme.nomeFilme}"></span></h2>
                             <p>Classificacao: <span th:text="${filme.classificacao}"></span></p>
                             <p>Duracao: <span th:text="${filme.duracao}"></span></p>
-                            <p>Esta vigente? <span th:text="${filme.vigencia}"></span></p>
+                            <p>Vigencia: <span th:text="${filme.vigencia}"></span></p>
                             <p>Categoria: <span th:text="${filme.categoria}"></span></p>
                         </div>
                         <a href="/filmes" class="btn btn-cadastro">Lista de filmes</a>
@@ -84,8 +84,7 @@
                     <section id="sessao_cadastro" class="sessao-cadastro" aria-labelledby="lblsessaocadastro">
                         <h2 id="lblsessaocadastro">Cadastro de sessoes para este filme:</h2>
                         <th:block th:include="mensagemValidacao"></th:block>
-                        <form class="form form-sessao" id="form-sessao" action=""
-                              method="post" th:object="sessao">
+                        <form class="form form-sessao" id="form-sessao" action="" method="post">
                             <div class="form-group">
                                 <label for="dia_sessao">Dia da Sessao</label>
                                 <input type="date" name="dia" class="form-control" id="dia_sessao" placeholder="" />
@@ -101,10 +100,10 @@
                                 <input type="radio" name="dublagem" class="form-control" id="dublado_nao" value="0" />
                                 <label for="dublado_nao">Nao</label>
                             </div>
-<!--                            <select name="sala" class="form-control" id="sala">-->
-<!--                                <option value="">Selecione uma Sala</option>-->
-<!--                                <option th:each="sala : ${sala}" th:value="${sala.idSala}" th:text="${sala.idSala}+' - '+${sala.tipoImagem}"></option>-->
-<!--                            </select>-->
+                            <select name="codS" class="form-control" id="sala">
+                                <option value="">Selecione uma Sala</option>
+                                <option th:each="sala : ${sala}" th:value="${sala.idSala}" th:text="${sala.idSala}+' - '+${sala.tipoImagem}" path="codS"></option>
+                            </select>
                             <button type="submit" class="btn btn-primary">Cadastrar</button>
                         </form>
                     </section>
@@ -116,12 +115,12 @@
                                 <p>Dia: <span th:text="${sessao.dia}"></span></p>
                                 <p>Hora: <span th:text="${sessao.hora}"></span></p>
                                 <p>Dublado: <span th:text="${sessao.dublagem}"></span></p>
-<!--                                <p>Sala: <span th:text="${sessao.sala}"></span></p>-->
+                                <p>Sala: <span th:text="${sessao.sala.getIdSala()}"></span></p>
                                 <p>
                                     <span>Deletar:</span>
                                     <a class="btn btn-danger"
                                                 th:href="${(#mvc.url('FC#deletarSessao').arg(0, sessao.idSessao)).build()}">
-                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
                                     </a>
                                 </p>
                             </li>

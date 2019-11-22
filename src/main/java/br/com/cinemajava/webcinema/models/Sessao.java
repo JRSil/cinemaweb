@@ -27,6 +27,8 @@ public class Sessao implements Serializable
     @ManyToOne
     private Sala sala;
 
+    private int codS;
+
     public long getIdSessao()
     {
         return idSessao;
@@ -85,5 +87,15 @@ public class Sessao implements Serializable
     public void setSala(Sala sala)
     {
         this.sala = sala;
+    }
+
+    public int getCodS()
+    {
+        return codS;
+    }
+
+    public void setCodS(int codS)
+    {
+        this.codS = codS;
     }
 }

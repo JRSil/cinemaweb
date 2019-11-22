@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
     <meta charset="UTF-8"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
@@ -69,7 +70,9 @@
             <div class="container">
                 <div class="row">
 
-                    <section id="sala_cadastro" class="sala-cadastro">
+                    <section id="sala_cadastro" class="sala-cadastro" aria-labelledby="lblcadastrosala">
+                        <h2 id="lblcadastrosala">Cadastrar Sala:</h2>
+                        <th:block th:include="mensagemValidacao"></th:block>
                         <form class="form form-filme" id="form-sala" action="" method="post">
                             <div class="form-group">
                                 <label for="tipo_imagem">Tipo de imagem</label>
