@@ -1,21 +1,22 @@
 package br.com.cinemajava.webcinema.models;
 
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import java.io.Serializable;
+import javax.persistence.*;
+import java.util.Collection;
+import java.util.List;
 
 @Entity
-public class Atendente implements Serializable
+public class Atendente implements UserDetails
 {
-    private static final long serialVersionUID = 1L;
-
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long idAtendente;
+    @NotEmpty
+    private String user;
+
+    @NotEmpty
+    private String senha;
 
     @NotEmpty
     private String nome;
@@ -25,22 +26,14 @@ public class Atendente implements Serializable
     private String nasc;
     @NotEmpty
     private String email;
-    @NotEmpty
-    private String user;
-    @NotEmpty
-    private String senha;
-    @NotEmpty
-    private String tipo;
 
-    public long getIdAtendente()
-    {
-        return idAtendente;
-    }
-
-    public void setIdAtendente(long idAtendente)
-    {
-        this.idAtendente = idAtendente;
-    }
+    @ManyToMany
+    @JoinTable(name = "usuarios_roles", joinColumns = @JoinColumn(
+            name = "atendente_id", referencedColumnName = "user"),
+            inverseJoinColumns = @JoinColumn(
+            name = "role_id", referencedColumnName = "nomeRole")
+    )
+    private List<Role> roles;
 
     public String getNome()
     {
@@ -102,13 +95,48 @@ public class Atendente implements Serializable
         this.senha = senha;
     }
 
-    public String getTipo()
+    public List<Role> getRoles()
     {
-        return tipo;
+        return roles;
     }
 
-    public void setTipo(String tipo)
+    public void setRoles(List<Role> roles)
     {
-        this.tipo = tipo;
+        this.roles = roles;
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return null;
+    }
+
+    @Override
+    public String getPassword() {
+        return this.senha;
+    }
+
+    @Override
+    public String getUsername() {
+        return this.user;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
     }
 }

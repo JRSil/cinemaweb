@@ -5,4 +5,5 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface AtendenteRepository extends CrudRepository<Atendente, String>
 {
+    Atendente findByUser(String user);
 }
