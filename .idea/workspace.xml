@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b627de2c-6211-483c-a749-ddab50b65c89" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cinemajava/webcinema/Boot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cinemajava/webcinema/Boot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cinemajava/webcinema/controllers/AtendenteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cinemajava/webcinema/controllers/AtendenteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cinemajava/webcinema/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cinemajava/webcinema/controllers/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cinemajava/webcinema/models/Atendente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cinemajava/webcinema/models/Atendente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cinemajava/webcinema/repository/AtendenteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cinemajava/webcinema/repository/AtendenteRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cinemajava/webcinema/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cinemajava/webcinema/security/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/atendente/formAtendente.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/atendente/formAtendente.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sala/salas.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sala/salas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cinemajava/webcinema/controllers/AtendenteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cinemajava/webcinema/controllers/AtendenteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cinemajava/webcinema/controllers/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cinemajava/webcinema/controllers/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cinemajava/webcinema/models/Atendente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cinemajava/webcinema/models/Atendente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cinemajava/webcinema/security/ImplementsUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cinemajava/webcinema/security/ImplementsUserDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cinemajava/webcinema/security/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cinemajava/webcinema/security/WebSecurityConfig.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +113,8 @@
       <workItem from="1574022863103" duration="1654000" />
       <workItem from="1574381388240" duration="8336000" />
       <workItem from="1574550361964" duration="3278000" />
-      <workItem from="1574617228191" duration="9239000" />
+      <workItem from="1574617228191" duration="9433000" />
+      <workItem from="1574807312846" duration="12558000" />
     </task>
     <servers />
   </component>

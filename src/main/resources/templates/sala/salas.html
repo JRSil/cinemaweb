@@ -80,9 +80,9 @@
                     <tbody>
                     <tr th:each="sala : ${sala}" class="item-sala">
                         <td>
-                            <a th:href="${(#mvc.url('SC#detalhesSala').arg(0, sala.idSala)).build()}">
+<!--                            <a th:href="${(#mvc.url('SC#detalhesSala').arg(0, sala.idSala)).build()}">-->
                                 <span th:text="${sala.idSala}"></span>
-                            </a>
+<!--                            </a>-->
                         </td>
                         <td><span th:text="${sala.tipoImagem}"></span></td>
                         <td><span th:text="${sala.qtdMax}"></span></td>

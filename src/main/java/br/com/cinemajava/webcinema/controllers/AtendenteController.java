@@ -3,6 +3,7 @@ package br.com.cinemajava.webcinema.controllers;
 import br.com.cinemajava.webcinema.models.Atendente;
 import br.com.cinemajava.webcinema.repository.AtendenteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,6 +32,8 @@ public class AtendenteController
             attributes.addFlashAttribute("mensagem", "Verifique os campos!");
             return "redirect:/cadastrarAtendente";
         }
+        String senha = new BCryptPasswordEncoder().encode(atendente.getSenha());
+        atendente.setSenha(senha);
         ar.save(atendente);
         attributes.addFlashAttribute("mensagem", "Atendente adicionado com sucesso!");
         return "redirect:/cadastrarAtendente";

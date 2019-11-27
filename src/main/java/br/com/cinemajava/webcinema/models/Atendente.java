@@ -26,6 +26,8 @@ public class Atendente implements UserDetails
     private String nasc;
     @NotEmpty
     private String email;
+    @NotEmpty
+    private String tipo;
 
     @ManyToMany
     @JoinTable(name = "usuarios_roles", joinColumns = @JoinColumn(
@@ -85,6 +87,16 @@ public class Atendente implements UserDetails
         this.user = user;
     }
 
+    public String getTipo()
+    {
+        return tipo;
+    }
+
+    public void setTipo(String tipo)
+    {
+        this.tipo = tipo;
+    }
+
     public String getSenha()
     {
         return senha;
@@ -107,7 +119,7 @@ public class Atendente implements UserDetails
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        return this.roles;
     }
 
     @Override
