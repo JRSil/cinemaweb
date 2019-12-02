@@ -88,7 +88,7 @@ public class FilmeController
             System.err.println("idFilme = " + idFilme + ", sessao = " + sessao.getCodS() + ", result = " + result + ", attributes = " + attributes);
             return "redirect:/filmes/{idFilme}";
         }
-        System.err.println("idFilme = " + idFilme + ", sessao = " + sessao.getCodS() + ", result = " + result + ", attributes = " + attributes);
+        System.err.println("sessao = " + sessao.getDia());
         Filme filme = fr.findByIdFilme(idFilme);
         Sala sala = sar.findByIdSala(sessao.getCodS());
         sessao.setFilme(filme);
@@ -108,5 +108,11 @@ public class FilmeController
         long idFilmeLong = filme.getIdFilme();
         String idFilme = "" + idFilmeLong;
         return "redirect:/filmes/" + idFilme;
+    }
+
+    @RequestMapping("getDate")
+    public String getDate(String data) {
+        String dataF = data;
+        System.err.println(data);
     }
 }
